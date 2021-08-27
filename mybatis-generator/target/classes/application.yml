@@ -1,0 +1,60 @@
+## 配置端口
+#server:
+#  port: 8081
+#
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/mybatis-plus?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+#    username: root
+#    password: root
+#    druid:
+#      # 初始连接数
+#      initial-size: 5
+#      # 最小连接池数量
+#      min-idle: 10
+#      # 最大连接池数量
+#      max-active: 20
+#      # 配置获取连接等待超时的时间
+#      max-wait: 60000
+#      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+#      time-between-eviction-runs-millis: 60000
+#      # 配置一个连接在池中最小生存的时间，单位是毫秒
+#      min-evictable-idle-time-millis: 300000
+#      # 配置一个连接在池中最大生存的时间，单位是毫秒
+#      max-evictable-idle-time-millis: 900000
+#      # 配置检测连接是否生效
+#      validation-query: select 1 from dual
+#      test-while-idle: true
+#      test-on-borrow: false
+#      test-on-return: false
+#      web-stat-filter:
+#        enabled: true
+#      stat-view-servlet:
+#        enabled: true
+#
+## mybatis-plus 配置
+#mybatis-plus:
+#  # xml扫描，多个目录用逗号或者分号分隔(告诉 Mapper 所对应的 XML 文件位置)
+#  mapper-locations: classpath:mapper/*.xml
+#  configuration:
+#    # 是否开启自动驼峰命名规则映射:从数据库列名到Java属性驼峰命名的类似映射
+#    map-underscore-to-camel-case: true
+#    # 如果查询结果中包含空值的列，则 MyBatis 在映射的时候，不会映射这个字段
+#    call-setters-on-nulls: true
+#    # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  # 实体扫描，多个package用逗号或者分号分隔
+#  type-aliases-package: com.example.mybatisgenerator.entity
+#  global-config:
+#    db-config:
+#      # 主键类型 AUTO:"数据库ID自增" INPUT:"用户输入ID",ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID"
+#      id-type: auto
+#      # 删除前
+#      logic-not-delete-value: 1
+#      # 删除后
+#      logic-delete-value: 0
+#      # 数据库表名的前缀
+#      table-prefix: t_
+
+
